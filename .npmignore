@@ -1,0 +1,10 @@
+*.log
+*.sh
+*.swo
+*.swp
+*~
+.editorconfig
+.jshintignore
+.jshintrc
+.scss-lint.yml
+npm-debug.log*

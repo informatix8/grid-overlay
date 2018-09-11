@@ -1,0 +1,71 @@
+# javascript
+node_modules/
+bower_components/
+lib-cov
+coverage
+.node_repl_history
+.yarn-integrity
+.next
+typings/
+
+# scss
+scssReport.xml
+
+# cache directories
+.sass-cache/
+.npm
+.eslintcache
+
+# temporary and build
+.tmp/
+tmp/
+dist/
+demo/dist/
+demo-vue/dist/
+
+# logs
+log/
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# vim
+*~
+*.swp
+*.swo
+
+# OSX
+.DS_Store
+.VolumeIcon.icns
+.fseventsd
+.Trashes
+._.Trashes
+._.
+.Spotlight-V100
+Icon
+
+
+# windows
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# privileged information
+.npmrc
+
+# archives
+*.zip
+*.gz
+*.tgz
+
+.env
+
+.project
+package-lock.json
