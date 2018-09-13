@@ -8,3 +8,4 @@
 .jshintrc
 .scss-lint.yml
 npm-debug.log*
+.nvmrc

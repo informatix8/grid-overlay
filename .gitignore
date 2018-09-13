@@ -69,3 +69,4 @@ Icon
 
 .project
 package-lock.json
+.nvmrc
