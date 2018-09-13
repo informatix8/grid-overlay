@@ -2,6 +2,12 @@
 
 Line up your UI!
 
+## Install
+
+```shell
+$ npm install grid-overlay --save-dev
+```
+
 ## Usage
 
 ```javascript
@@ -52,12 +58,6 @@ new GridOverlay({
     v-bind:foreground-color="'#ff00ff'"
     v-bind:pre-create="gridOverlayPreCreate"
 ></grid-overlay>
-```
-
-## Install
-
-```shell
-$ npm install grid-overlay --save-dev
 ```
 
 ## Development
