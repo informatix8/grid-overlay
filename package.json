@@ -1,32 +1,32 @@
 {
-    "name": "grid-overlay",
-    "description": "",
-    "main": "src/grid-overlay.js",
-    "scripts": {
-        "build": "npm run lint && npm run scripts && npm run scripts-vue",
-        "scripts": "node ./node_modules/browserify/bin/cmd.js -s GridOverlay src/grid-overlay.js -do dist/grid-overlay.js && node ./node_modules/uglify-js/bin/uglifyjs -c -o dist/grid-overlay.min.js dist/grid-overlay.js",
-        "scripts-vue": "node ./node_modules/browserify/bin/cmd.js -s GridOverlayVue src/grid-overlay-vue.js -do dist/grid-overlay-vue.js && node ./node_modules/uglify-js/bin/uglifyjs -c -o dist/grid-overlay-vue.min.js dist/grid-overlay-vue.js",
-        "lint": "node ./node_modules/jshint/dist/jshint.js .",
-        "jsdoc": "node ./node_modules/jsdoc/jsdoc.js -c jsdoc.conf.json"
-    },
-    "repository": {
-        "type": "git",
-        "url": ""
-    },
-    "author": "",
-    "license": "MIT",
-    "bugs": {
-        "url": ""
-    },
-    "homepage": "",
-    "devDependencies": {
-        "browserify": "^16.2.2",
-        "uglify-js": "^3.4.8",
-        "jsdoc": "^3.5.5",
-        "jshint": "^2.9.6",
-        "lint": "^1.1.2",
-        "npm-dragndrop": "^1.2.0",
-        "lodash.debounce": "^4.0.8",
-        "lodash.merge": "^4.6.1"
-    }
+  "name": "grid-overlay",
+  "description": "Line up your UI!",
+  "main": "src/grid-overlay.js",
+  "scripts": {
+    "build": "npm run lint && npm run scripts && npm run scripts-vue",
+    "scripts": "node ./node_modules/browserify/bin/cmd.js -s GridOverlay src/grid-overlay.js -do dist/grid-overlay.js && node ./node_modules/uglify-js/bin/uglifyjs -c -o dist/grid-overlay.min.js dist/grid-overlay.js",
+    "scripts-vue": "node ./node_modules/browserify/bin/cmd.js -s GridOverlayVue src/grid-overlay-vue.js -do dist/grid-overlay-vue.js && node ./node_modules/uglify-js/bin/uglifyjs -c -o dist/grid-overlay-vue.min.js dist/grid-overlay-vue.js",
+    "lint": "node ./node_modules/jshint/dist/jshint.js .",
+    "jsdoc": "node ./node_modules/jsdoc/jsdoc.js -c jsdoc.conf.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:informatix8/grid-overlay.git"
+  },
+  "author": "Mjr",
+  "contributors": [
+    "Mjr <mjr@informatix.io>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "jsdoc": "^3.5.5",
+    "jshint": "^2.9.6",
+    "lint": "^1.1.2",
+    "lodash.debounce": "^4.0.8",
+    "lodash.merge": "^4.6.1",
+    "npm-dragndrop": "^1.2.0",
+    "uglify-js": "^3.4.8"
+  }
 }
