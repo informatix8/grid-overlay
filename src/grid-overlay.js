@@ -26,7 +26,8 @@ var merge = require('lodash.merge');
  * @param {Number} [options.extraLeftRightGutter=0] Extra grid padding (first left and last right).
  * @param {AdaptiveOptions[]} [options.adaptive] List of objects, that describe adaptive behaviour.
  * @param {Boolean} [options.overlayVisible=true] Initial overlay visibility.
- * @param {Boolean} [options.writeInlineStyles=true] Apply or not visual styles. Overlay max-width and display styles will be set.
+ * @param {Boolean} [options.writeInlineStylesOverlay=true] Apply or not visual Overlay styles.
+ * @param {Boolean} [options.writeInlineStylesControl=true] Apply or not visual Control styles.
  * @param {Number} [options.windowResizeDelay=50] How long to wait on _trailing_ window resize event logic.
  * @param {Number} [options.controlZIndex=1200] Control z index.
  * @param {String} [options.controlBackgroundColor='#474747'] Control background color.
@@ -90,7 +91,8 @@ function GridOverlay(options) {
         ],
         draggable: true,
         overlayVisible: true,
-        writeInlineStyles: true,
+        writeInlineStylesOverlay: true,
+        writeInlineStylesControl: true,
         windowResizeDelay: 50,
         controlZIndex: 1200,
         controlBackgroundColor: '#474747',
@@ -365,7 +367,7 @@ GridOverlay.prototype.buildOverlay = function buildOverlay() {
 
     this.overlay.style.display = 'none';
 
-    if (this.writeInlineStyles) {
+    if (this.writeInlineStylesOverlay) {
         this.overlay.style.position = 'fixed';
         this.overlay.style.top = '0';
         this.overlay.style.bottom = '0';
@@ -374,6 +376,7 @@ GridOverlay.prototype.buildOverlay = function buildOverlay() {
         this.overlay.style.opacity = this.overlayOpacity;
         this.overlay.style.paddingLeft = 1 * this.extraLeftRightGutter + 'px';
         this.overlay.style.paddingRight = 1 * this.extraLeftRightGutter + 'px';
+        this.overlay.style.zIndex = 1 * this.overlayZIndex;
     }
 
     if (this.overlayParentEl) {
@@ -411,7 +414,7 @@ GridOverlay.prototype.buildGrid = function buildGrid() {
         col = document.createElement('div');
         col.className = this.colClass;
 
-        if (this.writeInlineStyles) {
+        if (this.writeInlineStylesOverlay) {
             col.style.boxSizing = 'border-box';
             col.style.float = 'left';
 
@@ -423,7 +426,7 @@ GridOverlay.prototype.buildGrid = function buildGrid() {
 
         colContent = document.createElement('div');
         colContent.className = this.colContentClass;
-        if (this.writeInlineStyles) {
+        if (this.writeInlineStylesOverlay) {
             colContent.style.backgroundColor = this.foregroundColor;
         }
 
@@ -447,8 +450,8 @@ GridOverlay.prototype.buildControl = function buildControl() {
     this.control = document.createElement('div');
     this.control.className = this.controlClass;
 
-    if (this.writeInlineStyles) {
-        this.control.style.position = 'fixed';
+    if (this.writeInlineStylesControl) {
+        this.control.style.position = this.controlPosition;
         this.control.style.top = this.controlTop;
         this.control.style.right = this.controlRight;
         this.control.style.bottom = this.controlBottom;
@@ -465,6 +468,7 @@ GridOverlay.prototype.buildControl = function buildControl() {
     //
 
     this.checkbox = document.createElement('input');
+    this.checkbox.className = this.controlCheckboxClass;
     this.checkbox.setAttribute('type', 'checkbox');
     this.checkbox.setAttribute('tabindex', 0);
     if (this.overlayVisible) {
@@ -476,6 +480,7 @@ GridOverlay.prototype.buildControl = function buildControl() {
     label = document.createElement('label');
     label.className = this.controlLabelClass;
     label.appendChild(this.checkbox);
+    label.appendChild(document.createTextNode(' '));
     label.appendChild(document.createTextNode('Show Grid Columns'));
 
     row = document.createElement('div');
@@ -488,7 +493,7 @@ GridOverlay.prototype.buildControl = function buildControl() {
 
     kbd = document.createElement('kbd');
     kbd.className = this.controlKbdClass;
-    if (this.writeInlineStyles) {
+    if (this.writeInlineStylesControl) {
         kbd.style.padding = '.1rem .4rem';
         kbd.style.backgroundColor = '#ededed';
         kbd.style.border = '1px solid #bfbfbf';
@@ -537,6 +542,7 @@ GridOverlay.prototype.buildControl = function buildControl() {
 
     this.maxWidthEl = document.createElement('span');
     this.maxWidthEl.textContent = this.maxWidth ? this.maxWidth + 'px' : 'auto';
+    this.maxWidthEl.className = this.controlCheckboxClass;
 
     row = document.createElement('div');
     row.className = this.controlRowClass;
@@ -684,4 +690,3 @@ GridOverlay.prototype.destroy = function destroy() {
 };
 
 module.exports = GridOverlay;
-
