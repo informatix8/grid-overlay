@@ -85,3 +85,17 @@ npm run build
 cd demo-vue
 npm run build
 ```
+
+
+## Release
+
+```shell
+npm run jsdoc
+npm run build
+npm run scripts
+npm run scripts-vue
+git tag -a vX.Y.Z
+git push origin master
+git push origin --tags
+npm publish .
+```
