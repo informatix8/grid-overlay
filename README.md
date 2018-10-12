@@ -1,6 +1,6 @@
 # grid-overlay
 
-Line up your UI!
+Everything lines up.
 
 ## Install
 
