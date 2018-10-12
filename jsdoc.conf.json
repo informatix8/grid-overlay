@@ -8,7 +8,8 @@
         "destination": "./dist/docs/",
         "encoding": "utf8",
         "recurse": true,
-        "private": true
+        "private": true,
+        "template": "./node_modules/ub-jsdoc"
     },
     "sourceType": "module",
     "tags": {
