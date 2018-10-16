@@ -1,6 +1,6 @@
 {
   "name": "grid-overlay",
-  "description": "Line up your UI!",
+  "description": "Everything lines up.",
   "version": "1.2.1",
   "main": "src/grid-overlay.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "Mjr <mjr@informatix.io>"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://gridoverlay.com",
   "devDependencies": {
     "browserify": "^16.2.2",
     "jsdoc": "^3.5.5",

@@ -1,17 +1,28 @@
 # grid-overlay
 
-Everything lines up.
+*Everything lines up.*
 
-## Install
 
-```shell
-$ npm install grid-overlay --save-dev
-```
+- [Homepage](https://gridoverlay.com)
+- [Docs](https://gridoverlay.com/docs/)
+- [Codepen demo](https://codepen.io/informatix/pen/mzMwRO/?editors=1010#0)
 
 ## Usage
 
+### Install
+
+```shell
+npm install grid-overlay --save-dev
+```
+
+### CDN
+
+```html
+<script src="https://unpkg.com/grid-overlay@1.2.0/dist/grid-overlay.min.js"></script>
+```
+
+### Vanilla Javascript
 ```javascript
-// Frameworkless javascript
 new GridOverlay({
     controlParentEl: '.attach-grid-overlay-control-here',
     maxWidth: 1440,
@@ -44,8 +55,8 @@ new GridOverlay({
 });
 ```
 
+### Vue Component
 ```html
-<!-- Vue component -->
 <grid-overlay
     v-bind:adaptive="[
       { mediaQuery: '(max-width: 600px)',  cols: 2, gridGutter: 8, extraLeftRightGutter: 0 },
