@@ -20,14 +20,16 @@
   ],
   "license": "MIT",
   "homepage": "https://gridoverlay.com",
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "lodash.merge": "^4.6.1",
+    "npm-dragndrop": "^1.2.0"
+  },
   "devDependencies": {
     "browserify": "^16.2.2",
     "jsdoc": "^3.5.5",
     "jshint": "^2.9.6",
     "lint": "^1.1.2",
-    "lodash.debounce": "^4.0.8",
-    "lodash.merge": "^4.6.1",
-    "npm-dragndrop": "^1.2.0",
     "ub-jsdoc": "^1.7.3",
     "uglify-js": "^3.4.8"
   }
