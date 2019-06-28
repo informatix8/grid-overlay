@@ -1,11 +1,14 @@
 # grid-overlay
 
-*Everything lines up.*
+Visual grid overlay for aligning CSS layouts at development-time.
 
+Examples and the API are in the [documentation](https://gridoverlay.com)
 
-- [Homepage](https://gridoverlay.com)
-- [Docs](https://gridoverlay.com/docs/)
-- [Codepen demo](https://codepen.io/informatix/pen/mzMwRO/?editors=1010#0)
+## Features
+- Supply a column count, gutter width, and how they behave at any breakpoint
+- Supports additional gutters outside the first and last columns
+- Draggable on-screen responsive debugger
+- Toggle the overlay <kbd>Option</kbd> + <kbd>g</kbd>
 
 ## Usage
 
