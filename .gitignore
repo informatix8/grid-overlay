@@ -19,6 +19,7 @@ scssReport.xml
 # temporary and build
 .tmp/
 tmp/
+.dist/
 dist/
 demo/dist/
 demo-vue/dist/
@@ -50,8 +51,7 @@ pids
 ._.Trashes
 ._.
 .Spotlight-V100
-Icon
-
+Icon
 
 # windows
 [Tt]humbs.db
@@ -67,6 +67,8 @@ Icon
 
 .env
 
+.idea/
+.gitignore.rej
 .project
 package-lock.json
 .nvmrc
