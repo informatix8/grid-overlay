@@ -1,6 +1,7 @@
 {
   "upgrade": true,
   "reject": [
-    "gulp"
+    "gulp",
+    "ub-jsdoc"
   ]
 }
